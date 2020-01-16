@@ -1,0 +1,24 @@
+package by.epamtc.cl_obj.main;
+
+import java.util.Scanner;
+
+public class task_2 {
+    public static void main (String[] args){
+        Scanner scanner = new Scanner(System.in);
+        double z, a, b, c;
+        System.out.println("Enter value of a");
+        a = scanner.nextDouble();
+        if (a == 0) {
+            System.out.println("division by  0");
+            return;
+        }
+        System.out.println("Enter value of b");
+        b = scanner.nextDouble();
+        System.out.println("Enter value of c");
+        c = scanner.nextDouble();
+        z = b + Math.sqrt(b * b + 4 * a * c);
+        z /= 2 * a;
+        z += Math.pow(b, -2) - Math.pow(a, 3) * c;
+        System.out.println("The result is : " + z);
+    }
+}
