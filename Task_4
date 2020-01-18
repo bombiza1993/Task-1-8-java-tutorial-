@@ -1,0 +1,17 @@
+package by.epamtc.cl_obj.main;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Task4 {
+    public static void main(String[] args) throws IOException {
+        double in, out;
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        System.out.println("Inter number R kind of nnn.ddd:");
+        in = Double.parseDouble(br.readLine());
+        out = (int) in / 1000.0 + (in - (int) in) * 1000;
+        System.out.println("The result is: " + Math.round(out * 1000d) / 1000d);
+    }
+}
