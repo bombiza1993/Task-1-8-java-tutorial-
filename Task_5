@@ -1,0 +1,18 @@
+package by.epamtc.cl_obj.main;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Task5 {
+    public static void main(String[] args) throws IOException {
+        int hour, min, sec;
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Inter past your time in sec:");
+        sec = Integer.parseInt(br.readLine());
+        hour = sec / 3600;
+        min = sec / 60 - hour * 60;
+        sec -= (hour * 3600 + min * 60);
+            System.out.printf("%dч %dмин %dc%n", hour, min, sec);
+    }
+}
